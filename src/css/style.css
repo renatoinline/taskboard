@@ -1,0 +1,103 @@
+body {
+    color: #222;
+}
+
+h1,h2,h3 { 
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+.header {
+    margin-bottom: 20px;
+    border-bottom: solid 1px #ccc;
+}
+
+.container-estorias {
+    margin-bottom: 20px;
+}
+
+.container-estorias ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container-estorias ul li {
+    border: solid 2px black;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.estoria {
+    position: relative;
+}
+
+.btn {
+    padding: 4px;
+    border: solid 1px black;
+    color: #222;
+    background-color: white;
+}
+
+.btn:hover {
+    color: #222;
+    box-shadow: 3px 3px 6px 3px #222;
+    text-decoration: none;
+}
+
+
+
+.btn-finalizar, .pontuacao {
+    position: absolute;
+    right: 0;
+}
+
+.btn-finalizar {
+    top: 0;
+}
+
+.pontuacao {
+    top: 40px;
+}
+
+.container-tarefas {
+    margin-top: 20px;
+    border: solid 1px #222;
+    padding: 10px;
+}
+
+ul.tarefas li {
+    border: solid 1px #222;
+}
+
+
+.close {
+    border: solid 1px #222;
+    opacity: 1;
+    background-color: white;
+}
+
+.close:hover {
+    background-color: #ccc;
+}
+
+.container-tarefas form {
+    padding: 5px 10px;
+}
+
+.container-tarefas input:not([type="button"]) {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+}
+
+.container-tarefas input {
+    margin-bottom: 5px;
+} 
+
+.hide {
+    display: none;
+}
+
+.footer {
+    border-top: solid 1px #ccc;
+}
