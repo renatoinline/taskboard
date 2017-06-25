@@ -1,0 +1,42 @@
+<li>
+    <div class="estoria">
+        <h2>{{estoria.titulo}}</h2>
+        <p>{{estoria.descricao}}</p>
+        <a href="#" class="btn btn-tarefa">Tarefas</a>
+
+        <a href="#" class="btn btn-finalizar" (click)="remove(estoria)">Finalizar</a>
+        
+        <span *ngIf="estoria.pontos > 1" class="pontuacao">{{estoria.pontos}} pontos</span>
+        <span *ngIf="estoria.pontos <= 1" class="pontuacao">{{estoria.pontos}} ponto</span>
+
+        <div class="container-tarefas hide">
+            <h3>Tarefas</h3>
+            <ul class="tarefas">
+                <li>
+                    <div>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        Tarefa 0 1
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        Tarefa 0 1
+                    </div>
+                </li>
+            </ul>
+
+            <h4>Nova tarefa</h4>
+            <form action="">
+                <input type="text" name="txtNome" placeholder="Nova tarefa" required>
+                <input type="text" name="txtDescricao" placeholder="Descrição" required>
+                <input type="button" name="btnSalvar" class="btn btn-default"  value="Adicionar Tarefa">
+            </form>
+
+        </div>
+    </div>
+</li>
