@@ -18,7 +18,6 @@ export class TaskboardComponent {
 
     ngOnInit() {
         this.getEstorias();
-        console.log(this.estorias);
     }
 
     private getEstorias(): void {
@@ -28,9 +27,11 @@ export class TaskboardComponent {
                 error => this.errorMessage = <any> error);
     }
 
-    remove(event: Event) {
-        //todo
-        console.log("remover");
+    remove(event: string) {
+        
+        let id = parseInt(event, 10);
+        let index = this.estorias.findIndex((element, index, arr) => element.id === id);
+        this.estorias.splice(index, 1);
     }
 
 }

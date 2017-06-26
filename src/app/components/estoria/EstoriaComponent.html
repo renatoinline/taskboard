@@ -4,7 +4,7 @@
         <p>{{estoria.descricao}}</p>
         <a href="#" class="btn btn-tarefa">Tarefas</a>
 
-        <a href="#" class="btn btn-finalizar" (click)="remove(estoria)">Finalizar</a>
+        <a href="#" class="btn btn-finalizar" (click)="remove($event, estoria)">Finalizar</a>
         
         <span *ngIf="estoria.pontos > 1" class="pontuacao">{{estoria.pontos}} pontos</span>
         <span *ngIf="estoria.pontos <= 1" class="pontuacao">{{estoria.pontos}} ponto</span>

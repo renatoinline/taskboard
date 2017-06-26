@@ -12,7 +12,8 @@ export class EstoriaComponent {
     @Output()
     removed:EventEmitter<string> = new EventEmitter();
 
-    remove() {
-        this.removed.emit('complete');
+    remove(event: Event, estoria: Estoria) {
+        event.preventDefault();
+        this.removed.emit(estoria.id.toString());
     }
 }

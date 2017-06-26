@@ -5,7 +5,7 @@
 
             <!--Listagem de todas as estórias-->
             <ul class="estorias">
-                <estoria *ngFor="let estoria of estorias" (removed)="remove($event)"></estoria>
+                <estoria *ngFor="let estoria of estorias" [estoria]="estoria" (removed)="remove($event)"></estoria>
             </ul>
             
         </div>                    
