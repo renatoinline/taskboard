@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 
 import { Estoria } from '../../entities/Estoria';
+import { Tarefa } from '../../entities/Tarefa';
 import { EstoriaDataService } from '../../services/EstoriaDataService';
 import { EstoriaComponent } from '../estoria/EstoriaComponent';
 
@@ -30,7 +31,9 @@ export class TaskboardComponent {
     remove(event: string) {
         
         let id = parseInt(event, 10);
-        let index = this.estorias.findIndex((element, index, arr) => element.id === id);
+        let index = this.estorias.findIndex((element) => {
+            return element.id === id;
+        });
         this.estorias.splice(index, 1);
     }
 
