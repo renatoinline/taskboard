@@ -28,12 +28,8 @@ export class TaskboardComponent {
                 error => this.errorMessage = <any> error);
     }
 
-    remove(event: string) {
-        
-        let id = parseInt(event, 10);
-        let index = this.estorias.findIndex((element) => {
-            return element.id === id;
-        });
+    remove(estoria: Estoria) {        
+        let index = this.estorias.findIndex(element => element.id === estoria.id);
         this.estorias.splice(index, 1);
     }
 

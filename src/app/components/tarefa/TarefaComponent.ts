@@ -8,4 +8,12 @@ import { Tarefa } from '../../entities/Tarefa';
 })
 export class TarefaComponent {
     @Input() tarefa: Tarefa;
+
+    @Output()
+    tarefaRemoved:EventEmitter<Tarefa> = new EventEmitter();
+
+    removerTarefa(event: Event, tarefa: Tarefa) {
+        event.preventDefault();
+        this.tarefaRemoved.emit(tarefa);
+    }
 }

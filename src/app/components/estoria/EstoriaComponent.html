@@ -12,7 +12,7 @@
         <div *ngIf="showHideTarefas" class="container-tarefas">
             <h3>Tarefas</h3>
             <ul class="tarefas">
-                <tarefa *ngFor="let tarefa of estoria.tarefas" [tarefa]="tarefa"></tarefa>                
+                <tarefa *ngFor="let tarefa of estoria.tarefas" [tarefa]="tarefa" (tarefaRemoved)="removerTarefa($event)"></tarefa>
             </ul>
 
             <h4>Nova tarefa</h4>
