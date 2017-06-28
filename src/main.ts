@@ -9,8 +9,11 @@ import { HttpModule } from '@angular/http';
 // componentes
 import { AppComponent } from './app/components/app/AppComponent';
 import { TaskboardComponent } from './app/components/taskboard/TaskboardComponent';
-import { EstoriaDataService } from './app/services/EstoriaDataService';
 import { EstoriaComponent } from './app/components/estoria/EstoriaComponent';
+import { TarefaComponent } from './app/components/tarefa/TarefaComponent';
+
+// services
+import { EstoriaDataService } from './app/services/EstoriaDataService';
 
 const appRoutes: Routes = [
     { path: '' , redirectTo: 'taskboard' , pathMatch: 'full' },
@@ -19,7 +22,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [BrowserModule, HttpModule, RouterModule.forRoot(appRoutes)],
-    declarations: [ AppComponent, TaskboardComponent, EstoriaComponent ],
+    declarations: [ AppComponent, TaskboardComponent, EstoriaComponent, TarefaComponent ],
     bootstrap: [ AppComponent ],
     providers: [EstoriaDataService]
 })
