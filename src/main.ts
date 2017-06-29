@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
-//import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
@@ -21,7 +21,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-    imports: [BrowserModule, HttpModule, RouterModule.forRoot(appRoutes)],
+    imports: [BrowserModule, HttpModule, RouterModule.forRoot(appRoutes), FormsModule, ReactiveFormsModule],
     declarations: [ AppComponent, TaskboardComponent, EstoriaComponent, TarefaComponent ],
     bootstrap: [ AppComponent ],
     providers: [EstoriaDataService]

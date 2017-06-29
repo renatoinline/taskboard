@@ -16,10 +16,11 @@
             </ul>
 
             <h4>Nova tarefa</h4>
-            <form action="">
-                <input type="text" name="txtNome" placeholder="Nova tarefa" required>
-                <input type="text" name="txtDescricao" placeholder="Descrição" required>
-                <input type="button" name="btnSalvar" class="btn btn-default"  value="Adicionar Tarefa">
+            <form [formGroup]="tarefaForm" (ngSubmit)="salvarTarefa($event)">
+                <input type="hidden" formControlName="id">
+                <input type="text" formControlName="titulo" placeholder="Títula da tarefa" required>
+                <input type="text" formControlName="descricao" placeholder="Descrição" required>
+                <input type="submit" name="btnSalvar" class="btn btn-default"  value="Adicionar Tarefa">
             </form>
 
         </div>

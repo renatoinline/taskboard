@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { TarefaComponent } from '../tarefa/TarefaComponent';
 import { Estoria } from '../../entities/Estoria';
@@ -15,6 +16,21 @@ export class EstoriaComponent {
     removed:EventEmitter<Estoria> = new EventEmitter();
 
     showHideTarefas: boolean = false;
+
+    public tarefaForm = this.fb.group({
+        id: [0],
+        titulo: ["", Validators.required],
+        descricao: ["", Validators.required]
+    });
+
+    constructor(public fb: FormBuilder) {}
+
+    salvarTarefa(event: Event){
+        let novaTareva = <Tarefa> this.tarefaForm.value;
+        novaTareva.id = this.estoria.tarefas.length + 1;
+        this.estoria.tarefas.push(novaTareva);
+        console.log(novaTareva);
+    }
 
     remove(event: Event, estoria: Estoria) {
         event.preventDefault();
